@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ba224db7-9c86-4eb1-a49d-ae565dae7b6b
+:END:
+#+title: Computer Science
+
+* Tools
+- [[id:3541a6e3-6605-4329-b221-9f04a5171c51][Docker]], a tool for virtualization.

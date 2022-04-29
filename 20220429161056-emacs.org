@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e6bd5830-8352-46c5-98a1-20ad1fe5fcd4
+:END:
+#+title: Emacs
+
+Emacs is a highly customizable text editor. Some of its main features are:
+
+- [[id:f35f8219-218a-45f7-bd3e-0187268fb16d][Org Mode]]
+- [[id:eb4fc8e4-869c-4605-b3ec-9d0a98e6f7df][Magit]] 

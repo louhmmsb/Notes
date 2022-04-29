@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       3541a6e3-6605-4329-b221-9f04a5171c51
+:END:
+#+title: Docker
+
+* References
+- Docker documentation: https://docs.docker.com/
+
+* Useful commands
+To run a container simply run:
+
+#+begin_src bash
+  docker container run -e <KEY=value> <image-name>:<tag-version>
+#+end_src
+
+The flag ~-e~ is used to set up environment variables inside the docker.
+Some more interesting flags for this the ~run~ command:
+
+- ~-d~ is for detach.
+- ~-p <host_port>:<container_port>~ is for mapping a port from the host to the container.
+- ~--name NAME~ is for giving a specific name for the container.
+- ~-v <host_path>:<container_path>~ is for mapping the host file system to the container file system.
+- ~-v <volume_name>:<container_path>~ is for mapping a volume to the container. If the volume given doesn't exist, it will be created by Docker.
+
+To list containers that are being executed run:
+#+begin_src bash
+  docker container ls [-a]
+#+end_src
+
+The flag ~-a~ makes the command also list containers that are stopped.
+
+To stop a container run:
+#+begin_src bash
+  docker container stop <id/name>
+#+end_src
+
+To remove *stopped* containers:
+
+#+begin_src bash
+  docker container rm <id/name>
+#+end_src
+
+To download an image:
+#+begin_src bash
+  docker image pull <image-name>:<tag-version>
+#+end_src
+
+To run a command inside a running container:
+#+begin_src bash
+  docker container exec COMMAND
+#+end_src
+
+Some useful flags for the above command
+
+- ~-i~ interactive (keeps STDIN open)
+- ~-t~ creates a terminal interface
+
