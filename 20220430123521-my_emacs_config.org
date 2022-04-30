@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b06bfbc8-1484-4818-b89c-30bb6ef8be1b
+:END:
+#+title: My Emacs Config
+
+My Emacs config can be found here: https://github.com/louhmmsb/Default-Emacs.
+
+* Useful stuff to remember
+A common bug that pops up when configuring Emacs with [[id:a816e20f-85d3-41a0-b6d8-cc2e133c5ac9][Org Babel]] is that when you open Emacs for the fist time it loads org first (so it can run [[id:a816e20f-85d3-41a0-b6d8-cc2e133c5ac9][Org Babel]]) and then it can behave differently than when Emacs is open after the first time.

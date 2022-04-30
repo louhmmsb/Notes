@@ -6,6 +6,8 @@
 * References
 
 
-* Definition
+* Definition and Functionalities
 Org mode is a document editing, formating and organizing mode for [[id:e6bd5830-8352-46c5-98a1-20ad1fe5fcd4][Emacs]].
+
+Org mode also has [[id:a816e20f-85d3-41a0-b6d8-cc2e133c5ac9][Org Babel]], which can be used to evaluate code inside from blocks inside org files. [[id:b06bfbc8-1484-4818-b89c-30bb6ef8be1b][My Emacs Config]] is made this way, and when I open Emacs, it gets compiled by Babel to a .el file which Emacs uses as it configuration.
 
