@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       d907a73b-eb00-418a-8106-61ceb7c7635b
+:END:
+#+title: Hunspell
+
+Hunspell is a spell checker program and [[id:e6bd5830-8352-46c5-98a1-20ad1fe5fcd4][Emacs]] uses it for correcting spelling mistakes.
+
+I downloaded all the .aff and .dic files from https://github.com/wooorm/dictionaries.
+
+For it to work I need to put all the .aff files and .dic inside /usr/share/hunspell.
