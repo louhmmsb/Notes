@@ -1,0 +1,95 @@
+:PROPERTIES:
+:ID:       105ecc1c-e069-4235-8b25-b09bcb2f2a77
+:END:
+#+title: Arch Installation
+
+This is a personal tutorial on how to install arch linux (strongly inspired by https://github.com/JoaoFukuda/dotfiles/blob/main/install_arch.md). This installation works for UEFI systems and not for BIOS ones.
+
+* Installation
+** Load brazilian keymap:
+#+begin_src bash
+  loadkeys br-abnt2
+#+end_src
+
+** Get mirrors
+#+begin_src bash
+  reflector --verbose -l 10 --sort rate --save /etc/pacman.d/mirrorlist
+#+end_src
+
+** Format with fdisk
+#+begin_src bash
+    fdisk
+#+end_src
+- g: Change to GPT partition table
+- n: new partition
+  - set size like +512MB and -16GB
+- d : delete partition
+- t : change partition type
+  - 1 : EFI partition (/boot/efi)
+  - 19 : Linux Swap (/tmp)
+  - 20 : Linux File system (/)
+
+My default way of doing partitions is:
+Partition 1: 512MB - EFI partition
+Partition 2: What's left - Linux Filesystem
+Partition 3: 2GB or 2x RAM - Linux Swap
+
+** Create the partitions
+#+begin_src bash
+  mkfs.vfat /dev/<partition1>
+  mkfs.ext4 /dev/<partition2>
+  mkswap /dev/<partition3>
+#+end_src
+
+** Mount the partitions
+#+begin_src bash
+  mount /dev/partition2 /mnt
+  mkdir -p /mnt/boot/efi && mount /dev/partition1 /mnt/boot/efi
+  swapon
+#+end_src
+
+** Install packages on the system
+#+begin_src bash
+  pacstrap /mnt base linux linux-firmware \
+           grub efibootmgr base-devel git \
+           neovim sudo tmux gcc clang cmake make \
+           i3-gaps noto-fonts{,-extra,-cjk,-emojis} kitty zsh pulseaudio dhcpcd 
+#+end_src
+
+** Create fstab
+#+begin_src bash
+  genfstab -U /mnt >> /mnt/etc/fstab
+#+end_src
+
+** Chroot to the new system
+#+begin_src bash
+  arch-chroot /mnt
+#+end_src
+
+** Configure local, time and network (this step seems to not work really well for me for some reason)
+#+begin_src bash
+  ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+  hwclock --systohc --utc
+  # Uncomment en_US.UTF-8 and other languages you wish to use
+  locale-gen
+  echo "LANG=en_US.UTF-8" > /etc/locale.conf
+  echo "KEYMAP=br-abnt" > /etc/vconsole.conf
+  echo "arch-computer" > /etc/hostname
+  # Config /etc/hostname to accept 127.0.0.1 and ::1 as localhost
+#+end_src
+
+** Create user and password
+#+begin_src bash
+  passwd
+  useradd -m username
+  passwd username
+#+end_src
+
+** Install and configure grub
+#+begin_src bash
+  grub-install --target=x86_64-efi --efi-directory=/boot/efi
+  grub-mkconfig -o /boot/grub/grub.cfg
+#+end_src
+
+** Now everything is done (almost)
+The rest of the configuration will be made inside the new system after booting. [[id:2368ec5e-a299-4b76-b5ee-33e72f8f8304][Arch Configuration]].

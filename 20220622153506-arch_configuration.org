@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       2368ec5e-a299-4b76-b5ee-33e72f8f8304
+:END:
+#+title: Arch Configuration
+#+PROPERTY: header-args :tangle arch-config.sh
+
+* Basic setup
+** Fixing locale
+For some reason my installation does not fix my locale, so this step is needed (for more locale stuff https://wiki.archlinux.org/title/Locale)
+Uncomment the lines of the locales that you want enabled at the ~/etc/locale.gen~ and then run:
+#+begin_src bash
+  locale-gen
+#+end_src
+** Keymap
+To set the keymap to Portuguese use the following command:
+#+begin_src bash
+  localectl set-keymap br
+#+end_src
+For more on keymaps:
+- https://wiki.archlinux.org/title/Xorg/Keyboard_configuration
+- https://wiki.archlinux.org/title/Linux_console/Keyboard_configuration
+** How to remove Pc speaker (annoying beep sound)
+#+begin_src bash
+  mkdir -p /etc/modprobe.d
+  echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+#+end_src
+
+** Fixing mouse dpi
+This fixes mouse dpi permanently for x
+#+begin_src bash
+  mkdir -p /etc/X11/xorg.conf.d
+  echo "Section \"InputClass\"
+  Identifier \"system-mouse\"
+  MatchDriver \"libinput\"
+  Option \"AccelSpeed\" \"-0.5\"
+EndSection" > /etc/X11/xorg.conf.d/99-libinput-custom-config.conf
+#+end_src
