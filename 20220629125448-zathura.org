@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       8df4949d-fa87-4d38-8959-7f1fa0d90725
+:END:
+#+title: Zathura
+#+PROPERTY: header-args :tangle zathura-installation.sh
+
+Zathura is a minimalist document reader.
+
+* Installing Zathura
+First, install the [[https://archlinux.org/packages/community/x86_64/zathura/][package]]
+#+begin_src bash
+  pacman -S zathura
+#+end_src
+
+After, install a backend for a especific type a file.
+- Some backends can be found at the [[https://wiki.archlinux.org/title/zathura][arch wiki]] page for zathura
+
+Personally, I like using the MuPDF which can be found on the [[https://archlinux.org/packages/community/x86_64/zathura-pdf-mupdf/][community repository]].
+#+begin_src bash
+  pacman -S zathura-pdf-mupdf
+#+end_src
+

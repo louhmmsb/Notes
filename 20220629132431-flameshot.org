@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       46d45d0a-21cd-4c57-8bf5-52315505ba09
+:END:
+#+title: Flameshot
+
+Flameshot is a open source screenshot software.
+
+* Installation
+#+begin_src bash
+  pacman -S flameshot
+#+end_src
