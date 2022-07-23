@@ -6,6 +6,21 @@
 * References
 - Docker documentation: https://docs.docker.com/
 
+* Post Installation
+After installing Docker:
+1. Create the docker user group
+   #+begin_src bash
+  sudo groupadd docker
+   #+end_src
+2. Add your user to the docker group
+#+begin_src bash
+  sudo usermod -aG docker $USER
+#+end_src
+3. On linux run the following command to activate the changes to groups
+#+begin_src bash
+  newgrp docker 
+#+end_src
+
 * Useful commands
 To run a container simply run:
 
