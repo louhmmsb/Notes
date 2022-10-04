@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       6db88002-2bf1-4978-a810-ab80b8c0d06f
+:END:
+#+title: Editing
+
+* Useful editing commands
+To surround a word with some char: [[https://stackoverflow.com/questions/2147875/what-vim-commands-can-be-used-to-quote-unquote-words#:~:text=press%20q%20and%20q%20for,to%20remember%20%22quotes%22).&text=press%20a%20then%20press%20'%20again%20to%20surround%20the%20word%20with%20quotes.][Stack overflow link with solution and a little more]].
+- ciw
+- add the opening char
+- C-r " (to paste what's in the " register without leaving insert mode)
+- add the closing char

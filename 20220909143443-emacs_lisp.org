@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       9a85d531-1732-4d81-a357-f8ee2ee11a2c
+:END:
+#+title: Emacs Lisp
+
+* Functions
+** setq
+Can be used to set one or more variables.
+#+begin_src emacs-lisp
+(setq variable1 value1
+      variable2 value2
+      variable3 value3)
+
+#+end_src
