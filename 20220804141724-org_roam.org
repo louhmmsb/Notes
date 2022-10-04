@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5a206c1a-68b6-46bc-8a0e-11697606f14a
+:END:
+#+title: Org Roam
+
+* Syncing
+To sync the org roam files with the system (useful after removing a org roam file) do M-x org-roam-db-sync RET.

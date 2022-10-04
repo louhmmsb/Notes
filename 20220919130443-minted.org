@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       1f879f59-22b7-416c-a0b9-4ae498602d9c
+:END:
+#+title: Minted
+
+Minted is a package for exporting syntax highlighted code in latex.
+
+The following snippet of emacs-lisp code enables minted for exporting syntex highlighted code from source code blocks in org-mode.
+#+begin_src emacs-lisp
+(after! org
+  (setq org-latex-packages-alist '(("" "minted")))
+  (setq org-latex-listings 'minted)
+  (setq org-latex-pdf-process
+        '("pdflatex -interaction nonstopmode -shell-escape -output-directory %o %f"
+          "bibtex %b"
+          "pdflatex -interaction nonstopmode -shell-escape -output-directory %o %f"
+          "pdflatex -interaction nonstopmode -shell-escape -output-directory %o %f")))
+#+end_src
