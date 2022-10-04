@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       e2384d9d-8ab2-41af-8b48-ba1a59b4d6dc
+:END:
+#+title: Color Pallete
+
+There is a site for creating a tints and shades from one base color, really useful when creating color palette.
+- https://maketintsandshades.com/

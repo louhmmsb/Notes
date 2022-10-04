@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       57a38651-4ef5-4cf0-bfdc-f9e13a746b45
+:END:
+#+title: React
+
+* Changing State
+- If your new state depends on the old state, use the function form to change it. By doing this you guarantee that the state being used on the function is really the last state.
+  #+begin_src js
+    const someHandler = (event) => {
+        setSomething((prevState) => {
+            return { ...prevState, event.target.value };
+        });
+    };
+  #+end_src
+
+* Redux
+- Important to remember that the reducer functions must be *PURE*, which means, they must have no side effects. To do side effects before executing the reducer functions, action creators must be used (or the side effets can be done on the component itself).

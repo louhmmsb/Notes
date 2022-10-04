@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       0ed74403-c3c6-4c1e-ae28-de1e4d6ac842
+:END:
+#+title: Axios
+
+Axios is JS library used for handling http requests. It's an alternative to the [[https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API][Fetch API]].
+
+- [[https://www.youtube.com/watch?v=6LyagkoRWYA][Axios Crash Course | HTTP Library]] made by Traversy Media.
