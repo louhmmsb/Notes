@@ -7,3 +7,6 @@ Magit is a git client for [[id:e6bd5830-8352-46c5-98a1-20ad1fe5fcd4][Emacs]].
 
 To create a git repo from inside Magit just run the command for magit-status from somewhere where there isn't a git repo.
 Then do ~M a~ to add reomote.
+
+* Changing commit authors
+- https://xenodium.com/magit-amend-commit-author/
