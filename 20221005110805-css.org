@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       7e05111b-ba21-4012-845d-bb12f89f7c6f
+:END:
+#+title: CSS
+
+* Specificity
+Used to define which styles will override which. In the following list, the ones above get overrided by the ones below.
+- Tag
+- Class, pseudo-class and attribute
+- ID
