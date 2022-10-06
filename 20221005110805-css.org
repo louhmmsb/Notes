@@ -8,3 +8,34 @@ Used to define which styles will override which. In the following list, the ones
 - Tag
 - Class, pseudo-class and attribute
 - ID
+
+* Combinators
+Used to select more specific elements. There are 4 types of combinators. All of this combinators can be used with more that two tags and the behavior generalizes.
+- Descendant combinators, which are the most used ones. Select the second element if it is directly or indirectly inside the first one.
+  #+begin_src css
+/* This makes all h1 tags inside divs have the color red. */
+div h1 {
+    color: red;
+}
+  #+end_src
+- Adjacent sibling combinators, which select the second element, only if it directly follows the first one (they need to have the same parent).
+  #+begin_src css
+/* This makes all h1 tags that directly follow a div have the color red. */
+div + h1 {
+    color: red;
+}
+  #+end_src
+- General sibling combinators, which select the second element if it follows the first one (they need to have the same parent).
+  #+begin_src css
+/* This makes all h1 tags that are siblings of divs (not necessarily direct) have the color red. */
+div ~ h1 {
+    color: red;
+}
+  #+end_src
+- Child combinators, which select the secnd element if it is a child of the first one.
+  #+begin_src css
+/* This makes all h1 tags that are direct children of divs have the color red. */
+div > h1 {
+    color: red;
+}
+  #+end_src
