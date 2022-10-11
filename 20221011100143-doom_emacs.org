@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ca549f86-2576-4125-a73b-5bd6c4a955d3
+:END:
+#+title: Doom Emacs
+
+* Language servers
+To install eslint in doom emacs just do ~M-x lsp-install-server RET eslint RET~.
+
+* Useful commands
+In doom emacs, to open the menu of a project inside ~counsel-projectile-switch-project~, instead of ~M-x o~, it's ~C-x o~ (the name of the function that does that is ~ivy-dispatching-done~ I think).
