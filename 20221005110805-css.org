@@ -39,3 +39,7 @@ div > h1 {
     color: red;
 }
   #+end_src
+
+* Margin collapsing
+If two elements are one on top of the other and both have a margin, the margin between them won't be the sum of the margins, it will be the bigger margin.
+There are some other cases of margin collapsing and they are all described [[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing][here]].
