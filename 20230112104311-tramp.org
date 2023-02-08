@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       bec9e195-df48-46aa-bbec-0f92492b0fcf
+:END:
+#+title: TRAMP
+
+TRAMP is a package used to access remote files or files with another user inside [[id:e6bd5830-8352-46c5-98a1-20ad1fe5fcd4][Emacs]].
+
+- [[https://emacs.stackexchange.com/questions/52/edit-file-with-super-user-rights][Stackoverflow link]] which shows how to open files using sudo and su inside Emacs.

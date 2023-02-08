@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       63d97604-ed94-43b6-bbeb-c2c8094e9a2c
+:END:
+#+title: Git
+
+To get log to show only the commits "titles" do ~git log --oneline~.
+
+* Amend
+Command used to change the last commit. To add new files to the last commit, just add them and then amend. It can also be used to change the author of a commit by doing ~git commit --amend --author="Your Name <youremail@provider.something>"~.
+
+* HEAD
+HEAD is a branch pointer, it points to the pointer of the current branch. A branch pointer points to the commit where you are in that branch.
+
+* Branches
+When moving from one branch to another, a not staged change may either block you from moving or move with you. The blockage will only happen if moving the file will create a conflict.
+
+** Merges
+- Fast Forward Merge is a merge where the pointer of one branch just moves forward to catch up with the pointer of another branch. This happens when you are merging branch a onto branch b and a is only commits ahead of b.
+- When there is a merge that is not a FF and there also is no conflict, git prompts you to make a merge commit, which is a commit with two parents merging the two branches.

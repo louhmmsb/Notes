@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       7abbda4c-621c-4b6c-a3c0-7aa36a32b00a
+:END:
+#+title: wsl
+
+* Wsl Docker
+- [[https://gbbigardi.medium.com/wsl-2-arch-docker-e-um-pouco-mais-do-meu-ambiente-de-desenvolvimento-42adc48368d4][How to install docker in WSL Arch]]
