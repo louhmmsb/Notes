@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       8caeb8e8-ca8f-4b32-9e30-76650894df84
+:END:
+#+title: Tree Sitter
+
+* Tree-sitter
+Tree-sitter is a tool which provides syntax highlighting for many text editors using a AST.
+
+From version 29 onwards, Emacs has native tree-sitter support, but for it to actually work, some steps must be followed.
+
+First, build and install Emacs as follows (it's also important to have the tree-sitter package/program installed):
+#+begin_src bash
+  git clone https://github.com/emacs-mirror/emacs.git
+  cd emacs
+  git checkout emacs-29.0.50
+  ./autogen.sh
+  ./configure --with-native-compilation --with-modules --with-json --with-cairo --with-tree-sitter
+  make -j4
+  sudo make install
+#+end_src
+
+After, install the [[https://github.com/casouri/tree-sitter-module/][tree-sitter module]] and build the grammars. Move the grammars to the file specified by the ~treesit-extra-load-path~. In [[id:b06bfbc8-1484-4818-b89c-30bb6ef8be1b][My Emacs Config]], the variable is set to ~~/.emacs.d/tree-sitter~.
+A more in depth tutorial on how to do this can be found [[https://blog.markhepburn.com/posts/experimenting-with-the-built-in-treesitter-support-in-emacs/][here]].
