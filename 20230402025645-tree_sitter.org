@@ -20,4 +20,12 @@ First, build and install Emacs as follows (it's also important to have the tree-
 #+end_src
 
 After, install the [[https://github.com/casouri/tree-sitter-module/][tree-sitter module]] and build the grammars. Move the grammars to the file specified by the ~treesit-extra-load-path~. In [[id:b06bfbc8-1484-4818-b89c-30bb6ef8be1b][My Emacs Config]], the variable is set to ~~/.emacs.d/tree-sitter~.
-A more in depth tutorial on how to do this can be found [[https://blog.markhepburn.com/posts/experimenting-with-the-built-in-treesitter-support-in-emacs/][here]].
+A more in depth tutorial on how to do this can be found [[https://blog.markhepburn.com/posts/experimenting-with-the-built-in-tree-sitter-support-in-emacs/][here]].
+
+Sometimes, in some distros (like ubuntu), it might be necessary to recreate the links and cache to the dynamic libraries after installing the tree-sitter library. The ~ldconfig~ command can be used to that.
+
+Below are some good sources on compiling and installing emacs with tree-sitter from source:
+- [[https://github.com/tree-sitter/tree-sitter][Tree-sitter github]]
+- [[https://dcreager.net/tree-sitter/getting-started/][Getting started with tree-sitter]]
+- [[https://practical.li/blog/posts/build-emacs-from-source-on-ubuntu-linux/][Building emacs with tree-sitter on ubuntu from source]]
+- [[https://www.masteringemacs.org/article/how-to-get-started-tree-sitter][How to get started with tree-sitter]]
