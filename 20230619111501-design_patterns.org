@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       5484e09f-b5e3-441f-a15f-2d581bc86bde
+:END:
+#+title: Design Patterns
+
+Design patterns are typical solutions to common problems in software design.
+They are divided in three major categories:
+- Creational Patterns
+- Structural Patterns
+- Behavioral Patterns
+
+The following site is a pretty good reference for some design patterns:
+- https://refactoring.guru/design-patterns

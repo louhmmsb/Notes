@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       ed47f843-99f4-42d9-8369-d9273466c5c2
+:END:
+#+title: SOLID
+
+In software engineering, SOLID is a mnemonic acronym for five design principles intended to make object-oriented designs more understandable, flexible, and maintainable (font: [[https://en.wikipedia.org/wiki/SOLID][Wikipedia]]).
+
+Each letter of the acronym means:
+- Single Responsibility Principle: "There should never be more than one reason for a class to change". This means that a class should have only one responsibility and do it very well. The other responsibilities should be done by other classes.
+- Open–closed Principle: "Software entities ... should be open for extension, but closed for modification". This means that rules need to be isolated from one another. This brings two big advantages:
+  1. When a rule needs to be changed, there is no need to touch the other rules.
+  2. When a new rule needs to be added, none of the already written code needs to be changed.
+- Liskov substitution principle: "Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it". This means that if you have a class Y which inherits from X, then every object from class Y must also be an object from class X and behave like one in every possible scenario. If this is not the case, then probably composition is better than inheritance for this specific problem.
+- Interface segregation principle: "Clients should not be forced to depend upon interfaces that they do not use". If you are implementing an interface on a class that doesn't need some of the interface methods, then you should consider creating another interface.
+- Dependency inversion principle: "Depend upon abstractions, [not] concretions". This means that you should depend on interfaces, which are elements that don't change, making code more maintainable and extensible.
