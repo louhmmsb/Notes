@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       d55e6c65-3b0a-4e58-a54b-b143c1544993
+:END:
+#+title: Java Records
+
+Java records are a programming resource, released officially in Java 16, which allows the programmer to create immutable classes. This is really useful to represent *data* like when creating itermediate models between json strings and the model used by the application. To create one, simply use the keyword ~record~
+instead of ~class~.
