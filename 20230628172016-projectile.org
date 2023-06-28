@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       fda285cc-d843-4545-b11d-a791a74b7986
+:END:
+#+title: Projectile
+
+Projectile is an Emacs package used to manage projects.
+
+* Configuration
+Projectile can be configured per project using through the file ~.dirs-locals.el~ inside the project root.
+Example:
+#+begin_src emacs-lisp
+  ((nil . ((projectile-project-run-cmd . "mvn spring-boot:run")
+            (projectile-project-install-cmd . "mvn install"))))
+#+end_src
+The above configuration makes projectile know which command should be used to run and to install a specific project (in this case it's a spring boot project).
+Documentation on how to configure more features can be found on the [[https://docs.projectile.mx/projectile/projects.html#storing-project-settings][projectile documentation]].

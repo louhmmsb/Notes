@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4f484119-f293-4b71-9118-7ed4701bd7f1
+:END:
+#+title: Emacs Performance
+
+There are some ways to increase Emacs' performance. Some of them are describe on the [[https://emacs-lsp.github.io/lsp-mode/page/performance/][lsp-mode wiki]]. These changes can be checked through the ~lsp-doctor~ command.
